@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Góp ý và Khiếu nại</title>
+    <style>
+        .padding-10 {
+            padding: 10px;
+        }
+
+        .the-form-wrapper {
+            width: 450px;
+            font-size: 20px;
+            margin: 0 auto;
+            box-shadow: 20px 10px 44px 3px rgb(158, 157, 157);
+        }
+
+        .required1 {
+            position: relative;
+            left: -15px;
+        }
+
+        .topic-filter-wrapper {
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            margin-bottom: 15px;
+            padding: 10px;
+            box-shadow: 0 3px 6px rgb(158, 157, 157);
+        }
+
+        .row-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .input-wrapper>input {
+            width: 240px;
+            padding: 10px;
+        }
+
+        .label-wrapper>label {
+            position: relative;
+            bottom: -12px;
+        }
+
+        #message {
+            width: 240px;
+            height: 60px;
+            padding: 10px;
+        }
+
+        .submit-wrapper {
+            text-align: center;
+        }
+
+        .submit-wrapper>input {
+            width: 100%;
+            padding: 8px;
+            border: blue .3px solid;
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            font-weight: lighter;
+        }
+
+        @media only screen and (max-width:500px) {
+            .the-form-wrapper {
+                width: 90%;
+            }
+
+            .row-wrapper,
+            .topic-filter-wrapper {
+                flex-wrap: wrap;
+            }
+
+            .label-wrapper>label {
+                position: relative;
+                bottom: 2px;
+            }
+
+            .input-wrapper>input,
+            #message {
+                width: 285px;
+                padding: 10px;
+            }
+
+            .topic-filter {
+                padding: 10px;
+                font-size: 15px;
+                margin: 10px auto;
+                width: 300px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form class="contact-form">
+        <h1 style="text-align: center; margin-bottom:50px ;">ProWatch Xin Hân Hạnh Được Hỗ Trợ Quý Khách</h1>
+        <div class="the-form-wrapper">
+            <div class="topic-filter-wrapper">
+                <label for="topic-filter">Quý khách đang quan tâm về:* </label>
+                <select required id="topic-filter" class="topic-filter" name="topic-filter">
+                    <option value="-1">Chọn chủ đề</option>
+                    <option value="1">Tư vấn</option>
+                    <option value="2">Khiếu nại - Phản ánh</option>
+                    <option value="3">Góp ý cải tiến</option>
+                </select>
+            </div>
+            <div class="row-wrapper padding-10">
+                <div class="label-wrapper">
+                    <label for="title">Tiêu đề *</label>
+
+                </div>
+                <div class="input-wrapper">
+                    <input id="title" name="title" class="input title" required type="text">
+                </div>
+            </div>
+            <div class="row-wrapper padding-10">
+                <div class="label-wrapper">
+                    <label for="message">Nội dung *</label>
+                </div>
+                <div class="input-wrapper">
+                    <textarea id="message" name="message" class="textarea message"
+                        placeholder="Xin quý khách vui lòng mô tả chi tiết"></textarea>
+                </div>
+            </div>
+            <div class="row-wrapper padding-10">
+                <div class="label-wrapper">
+                    <label for="fullname">Họ và tên *</label>
+                </div>
+                <div class="input-wrapper">
+                    <input id="fullname" name="fullname" class="input fullname" required type="text">
+                </div>
+            </div>
+            <div class="row-wrapper padding-10">
+                <div class="label-wrapper">
+                    <label for="email">Địa chỉ email *</label>
+                </div>
+                <div class="input-wrapper">
+                    <input id="email" name="email" class="input email" required type="text">
+                </div>
+            </div>
+            <div class="row-wrapper padding-10">
+                <div class="label-wrapper">
+                    <label for="tel">Số điện thoại *</label>
+                </div>
+                <div class="input-wrapper">
+                    <input id="tel" name="tel" pattern="[0-9]{10}" class="input tel" required type="text"
+                        maxlength="11">
+                </div>
+            </div>
+            <div class="submit-wrapper padding-10">
+                <input id="submit" name="submit" class="submit submit" type="submit" value="Gửi Liên Hệ">
+            </div>
+        </div>
+
+
+    </form>
+</body>
+
+</html>
